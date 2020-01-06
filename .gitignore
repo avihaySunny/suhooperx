@@ -1,0 +1,15 @@
+
+#ignore all files
+*
+
+#exclude following
+!/**/
+!*.c
+!*.h
+!.gitignore
+!*.md
+!*.js
+!*.java
+
+
+
