@@ -1,6 +1,5 @@
 
 #ignore all files
-*
 
 #exclude following
 !/**/
@@ -8,8 +7,6 @@
 !*.h
 !.gitignore
 !*.md
-!*.js
-!*.java
 
 
 
