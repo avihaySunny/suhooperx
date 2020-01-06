@@ -1,0 +1,42 @@
+<html>
+    <style> 
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+    <body>
+        <canvas class = "myCanvas"> 
+            <p> Can't load canvas </p>
+        </canvas>
+
+
+    </body>
+    <script>
+        var canvas = document.querySelector('.myCanvas'); 
+        var width = canvas.width = window.innerWidth; 
+        var height = canvas.width = window.innerHeight;  
+        var ctx = canvas.getContext("2d"); 
+        
+        ctx.fillStyle = 'rgb(0, 0, 0)'; 
+        ctx.fillRect(0, 0, width, height);
+        //-----------------------------------------------------
+    
+        ctx.fillStyle = 'rgb(255, 0, 0)';
+        
+        function drawLine(x1, y1, theta){
+            var canvas = document.querySelector('.myCanvas'); 
+            var ctx = canvas.getContext("2d"); 
+            ctx.rotate(toRadians(theta)); 
+            ctx.fillRect(x1, y1, 155, 2); 
+            
+        }
+        function toRadians(angle){
+            return angle * Math.PI / 180; 
+        }
+       
+        for (let i = 0; i < 40 ; i++){
+            drawLine(65, 35, i); 
+        }
+    </script>
+</html>

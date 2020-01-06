@@ -1,0 +1,51 @@
+<html lang='en'>
+    <style>
+      
+       
+    </style>
+  <head>
+    <script src="jquery-3.4.1.js"></script>
+    <meta charset='UTF-8'/>
+    <title>Registeration</title>
+    <link rel='stylesheet' href='crstyleProducts.css'/>
+  </head>
+
+  <body>
+    <header class='crheader'>
+      <h1>Product Registration</h1>
+      <p><em>The Future Is Near</em></p>
+      <a href="homepage.html" >Back To Home</a>               
+    </header>
+    
+    <form action = ' ' method = '' class = "crform">
+        
+        <div class="formRow"> 
+            <label for='companyName'>Company Name</label> 
+            <input id ="companyName" name ='crname' type = 'text' placeholder="Toshiba">
+            
+            <label for='productName'>Product Name</label>
+            <input id ="productName" name ='productName' type = 'text' placeholder="Spagetti">
+            
+            <label for='text'>Model id</label>
+            <input id ="model" name ='model' type = 'text' placeholder="D1908v5">
+        <button id = "submitBtn"> Add Product</button>
+    
+    </form>
+
+  </body>
+  <script> 
+  
+  document.getElementById("submitBtn").onclick = function(){
+   var data = {}; 
+   
+   data.companyName = document.getElementById("companyName").value; 
+   data.productName = document.getElementById("productName").value;
+   data.model = document.getElementById("model").value;
+   console.log(JSON.stringify(data)); 
+   $.post( "http://127.0.0.1:8081/Servlets/Products", JSON.stringify(data), function() {
+    alert( "success" )});
+
+  };  
+  
+  </script>
+</html> 

@@ -1,0 +1,114 @@
+<html>
+    <style>
+        a{
+            text-decoration: none;
+            font-style: italic;
+            position: absolute;
+            margin : 20px;
+            top: 10px;
+            font-size: 40px;
+        }
+        body{
+            font: 13px/20px Tahoma, Verdana, sans-serif;
+            color: #404040;
+            background: rgb(178, 206, 235)
+        }
+       .container {
+            margin: 50px auto;
+            width: 640px;
+        }
+
+        .login{
+            position: relative;
+            top: 100px;
+            margin: 0 auto;
+            padding: 20px 20px 20px;
+            width: 310px;
+            border-radius: 4px;
+            background :rgba (0, 0, 0, 0.08);
+        }
+
+        .login p.submit {
+            text-align: right;
+        }
+
+        .login-help {
+            margin: 20px 0;
+            font-size: 11px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 1px #2a85a1;
+        }
+        .login:before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            z-index: -1;
+            background: rgb(199, 199, 224);
+            border-radius: 20px;
+            border-color: black;
+        }
+        .login h1 {
+            margin: -20px -20px 21px;
+            line-height: 40px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #555;
+            text-align: center;
+            text-shadow: 0 1px white;
+            background: #f3f3f3;
+            border-bottom: 1px solid #cfcfcf;
+            border-radius: 3px 3px 0 0;
+            background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+            background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+            background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+            background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+            -webkit-box-shadow: 0 1px whitesmoke;
+            box-shadow: 0 1px whitesmoke;
+        }
+        .login-help a {
+            color: #cce7fa;
+            text-decoration: none;
+        }
+        
+        .login-help a:hover {
+            text-decoration: underline;
+        }
+        
+        :-moz-placeholder {
+            color: #c9c9c9 !important;
+            font-size: 13px;
+        }
+        
+        ::-webkit-input-placeholder {
+            color: #ccc;
+            font-size: 13px;
+        }
+
+    </style>
+<head>
+</head>
+
+<body>  
+    <div class = "container"> 
+        <div class = "login">
+            <form method="post" action="">
+                <p> <input type="text" name = "login" value = "" placeholder=" Username or Email"> </p>
+                <p> <input type="password" name = "password" value = "" placeholder="Password"> </p>
+                <p class = "remember_me"> 
+                    <label> 
+                        <input type="checkbox" name ="remember_me" id = "remember_me">
+                        Remember me on this computer
+                    </label>
+                </p>
+                <p class="submit "> <input type="submit" name="commit" value="Login"> </p>
+            </form>
+        </div>
+    </div>
+</body> 
+
+<a href="file:///home/student/Desktop/ClientWeb/FrontPage.html"> Homepage </a>
+</html>

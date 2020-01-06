@@ -1,0 +1,72 @@
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <title> Dynamic List</title>
+    </head>
+    <style>
+            li {
+              margin-bottom: 10px;
+              font-size : 25px; 
+            }
+            li button {
+              font-size: 15px;
+              margin-left: 20px;
+              color: #666;
+            }
+
+            button{
+                font-size: 15px;
+            }
+
+            input{
+                font-size: 25px;
+            }
+            span {
+                color : teal;
+            }
+    </style>
+    <body>
+        <h1> Dynamic List</h1>
+      
+        <div> 
+            <label> </label>
+            <input type="text" name = "item" id ="item"> 
+            <button id = 'one' onclick="addToList"> Add item </button> 
+        </div>
+        
+        <ul> 
+                
+        </ul> 
+    
+    
+    <script>
+        var list = document.querySelector('ul'); 
+        var input = document.querySelector('input');
+        var button = document.querySelector('button'); 
+        
+        button.onclick = function (){
+            var myItem = input.value; 
+            input.value = ' ';
+
+            var listItem = document.createElement('li'); 
+            var listText = document.createElement('span');
+            var listBtn = document.createElement('button'); 
+
+            listItem.appendChild(listText); 
+            listItem.appendChild(listBtn); 
+            list.appendChild(listItem); 
+
+            listText.textContent = myItem; 
+            listBtn.textContent = 'Delete'; 
+
+            listBtn.onclick = ()=> {
+                list.removeChild(listItem); 
+            };
+
+            input.focus(); 
+        }
+
+    </script>
+
+    </body>
+</html>

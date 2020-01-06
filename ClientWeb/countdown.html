@@ -1,0 +1,36 @@
+<html>
+    <style>
+    </style>
+
+    <body>
+        <div>
+            <form >
+                <p> Enter Time</p>
+                <input type="date" id= "deadline">
+            </form> 
+            <button id="startBtn"> Start Countdown </button> 
+        </div>
+        <div>
+            <p id = "display">
+            </p>
+        </div>
+    </body>
+
+    <script>
+        document.getElementById("startBtn").onclick = function(){
+            var endate = document.getElementById("deadline").value;
+            var sec = Date.parse(endate);
+            var timeLeft = sec - new Date();
+            
+            
+            var task = setInterval(function(){
+                document.getElementById("display").innerHTML = timeLeft--;
+                console.log(timeLeft);   
+                
+                if (timeLeft = 0){
+                    clearInterval(task); 
+                }
+            }, 1000);
+        }; 
+    </script>
+</html>

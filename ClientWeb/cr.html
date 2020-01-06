@@ -1,0 +1,55 @@
+<html lang='en'>
+    <style>
+      
+       
+    </style>
+  <head>
+    <script src="jquery-3.4.1.js"></script>
+    <meta charset='UTF-8'/>
+    <title>Registeration</title>
+    <link rel='stylesheet' href='crstyle.css'/>
+  </head>
+
+  <body>
+    <header class='crheader'>
+      <h1>Company Registration</h1>
+      <p><em>Join us today </em></p>
+      <a href="homepage.html" >Back To Home</a>               
+    </header>
+    
+    <form action = ' ' method = '' class = "crform">
+        
+        <div class="formRow"> 
+            <label for='companyName'>Company Name</label> 
+            <input id ="companyName" name ='crname' type = 'text' placeholder="Toshiba">
+            
+            <label for='email'>E-mail</label>
+            <input id ="email" name ='email' type = 'email' placeholder="toshiba@toshibush.com">
+            
+            <label for='phone'>Phone Number</label>
+            <input id ="phone" name ='phone' type = 'phone' placeholder="+972 52-4149-797">
+        </div>
+        <label class="checkbox" for='check-agree'>
+                <input id = 'check-agree' name ='check-agree' type='checkbox' value='I Agree'>
+                <span> I Agree </span>
+        </label>
+        <button id = "submitBtn"> Register </button>
+    
+    </form>
+
+  </body>
+  <script> 
+  
+  document.getElementById("submitBtn").onclick = function(){
+   var data = {}; 
+   
+   data.companyName = document.getElementById("companyName").value; 
+   data.email = document.getElementById("email").value;
+   data.phone = document.getElementById("phone").value;
+   $.post( "http://127.0.0.1:8081/Servlets/CR", JSON.stringify(data), function() {
+    alert( "success" )});
+
+  };  
+  
+  </script>
+</html> 
