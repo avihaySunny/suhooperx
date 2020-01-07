@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import './signin-comp-styles.scss'
 import FormInput from '../../component/form-input/form-input-component'
-export class SignIn extends Component {
+import CustomButton from '../../component/custom-button/custom-button-comp' 
+
+class SignIn extends Component {
     constructor(props){
         super(props)
         this.state={
@@ -9,7 +12,6 @@ export class SignIn extends Component {
         }
     }
     handleChange = event => {
-        console.log(event.target.value)
         const {value, name} = event.target
         this.setState({[name]:value})
     }
@@ -35,8 +37,7 @@ export class SignIn extends Component {
                     label = 'password'
                     handleChange={this.handleChange}
                     required/>
-                <label>Password</label>
-                <input type = 'submit' value = 'Submit Form'/>
+                <CustomButton type='submit'> Sign In</CustomButton>
             </form>
             </div>
         )
