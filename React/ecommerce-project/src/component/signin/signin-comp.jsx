@@ -21,7 +21,7 @@ class SignIn extends Component {
         const {email, password} = this.state
         try{
             await auth.signInWithEmailAndPassword(email,password);
-            this.setState({email:'', password:''}, ()=>console.log('hello'))
+            this.setState({email:'', password:''})
         }catch(err){
             console.log(err)
         }
