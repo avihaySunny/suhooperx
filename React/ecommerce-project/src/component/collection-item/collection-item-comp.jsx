@@ -15,13 +15,13 @@ function collectionItemComp({item ,addItem}) {
                 <span className='name'> {name}</span>
                 <span className='price'>{price}</span>
             </div>
-            <CustomButton onClick={()=>addItem(item)} inverted> ADD TO CART </CustomButton>
+            <CustomButton onClick={()=>{ addItem(item)}} inverted> ADD TO CART </CustomButton>
         </div>
-    )
+    )   
 }
 
 const mapDispatchToProps = dispatch => ({
-    addItem: item =>dispatch(addItem(item))
+  addItem: item => dispatch(addItem(item))
 });
 
 export default connect(null, mapDispatchToProps)(collectionItemComp)
